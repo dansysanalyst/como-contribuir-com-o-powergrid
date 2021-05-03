@@ -70,4 +70,4 @@ Agora é só rodar o comando `composer update` no seu projeto Laravel para ele a
 A imagem mostra o uso dos commits do meu repositório.  Eu havia instalado primeiramente o commit `219cdd8`.  Na imagem acima, foi atualizado para o commit `65ae610`.
 
 ## Tudo pronto!
-Agora é só seguir o fluxo de qualquer projeto Git: faça as alterações no seu fork e faça o push para o Github.  No diretório do seu projeto Laravel, rode o `composer update` para atualizar o código no seu projeto. Sem POG!  Grande abraço!
+Agora é só seguir o fluxo de qualquer projeto Git: faça as alterações no seu fork e faça o push para o Github.  No diretório do seu projeto Laravel, rode o `composer update` para atualizar o código no seu projeto. Sem POG(Programação Orientada à Gambiarras)!  Grande abraço!
