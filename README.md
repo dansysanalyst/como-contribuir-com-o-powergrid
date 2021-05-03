@@ -6,10 +6,10 @@
 
 # Como contribuir com o PowerGrid
 
-O objetivo desse documento é facilitar a colaboração com [Power Grid](https://github.com/Power-Components/livewire-powergrid).
+O objetivo desse documento é facilitar a colaboração com [PowerGrid](https://github.com/Power-Components/livewire-powergrid).
 
 ## 1) Fazer o fork do projeto
-Para isso, basta acessar a página do nosso repositório em [Power Grid](https://github.com/Power-Components/livewire-powergrid) e clicar no botão *Fork*:<br />
+Para isso, basta acessar a página do nosso repositório em [PowerGrid](https://github.com/Power-Components/livewire-powergrid) e clicar no botão *Fork*:<br />
 <img src="img/click-to-fork.png" /><br />
 No final você terá algo como https://github.com/cpereiraweb/livewire-powergrid.<br />
 Obs: Se você estiver associado à uma equipe ou organização no Github, você deverá confirmar em qual conta você deseja criar o fork.
@@ -34,14 +34,14 @@ git add .
 git commit -m "Added TODO.md"
 git push origin cpereiraweb  # Use o nome do seu branch aqui, ok?
 ```
-## 4) Adicione o Power Grid ao seu projeto Laravel
+## 4) Adicione o PowerGrid ao seu projeto Laravel
 Acesse a pasta do seu projeto Laravel e faça a instalação do componente, como descrito na documentação:
 ```bash
 composer require power-components/livewire-powergrid
 ```
-## 5) Configure o ```composer``` para usar o seu clone do Power Grid
+## 5) Configure o ```composer``` para usar o seu clone do PowerGrid
 Você vai precisar informar ao `composer` duas coisas: que quer usar uma versão de desenvolvimento do pacote e onde está essa versão.  Isso é simples:
-Abra o `composer.json` e identifique a linha de requisição do Power Grid:
+Abra o `composer.json` e identifique a linha de requisição do PowerGrid:
 ```json
 "power-components/livewire-powergrid": "^1.0",
 ```
