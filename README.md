@@ -49,7 +49,10 @@ Tomando por base o que eu fiz até aqui, vou configurar a versão.  Ela deve ser
 ```json
 "power-components/livewire-powergrid": "dev-cpereiraweb",
 ```
-O segundo passo é informar onde está esse repositório. Para isso acrescentamos a seção `repositories` ao nosso `composer.json`.  Veja o trecho abaixo:
+O segundo passo é informar onde está esse repositório. Para isso acrescentamos a seção `repositories` ao nosso `composer.json`.  
+Há pelo menos duas maneiras de fazer isso: usando a URL do seu repositório no Github ou indicar o caminho dele na sua máquina.
+
+Veja o trecho abaixo para usar o repositório no Github:
 ```json
         ...
         "spatie/laravel-ray": "^1.17",
@@ -64,10 +67,32 @@ O segundo passo é informar onde está esse repositório. Para isso acrescentamo
     "autoload": {
         ...
 ```
+
+E agora veja como fica usando o caminho do seu repositório local (onde você o clonou).  No meu caso, a pasta onde clonei o repositório localmente é `Z:\Code\forks\PowerComponents\livewire-powergrid`:
+```json
+        ...
+        "spatie/laravel-ray": "^1.17",
+        "wulfheart/pretty_routes": "^0.2.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "Z:\\Code\\forks\\PowerComponents\\livewire-powergrid"
+        }
+    ],
+    "autoload": {
+        ...
+```
+*Observação: meu ambiente é Windows 10.  Se você usa `WSL`, `Docker`, `Linux` ou `MacOS`, lembre-se de usar o caminho adequado ao seu sistema, que deve ser algo como `/caminho/do/meu/repo/forkado`, por exemplo.*<br />
+
 ## 6) Executar o `composer update`
-Agora é só rodar o comando `composer update` no seu projeto Laravel para ele atualizar as referências.  Veja o resultado abaixo:<br />
-<img src="img/composer-update.png"><br />
-A imagem mostra o uso dos commits do meu repositório.  Eu havia instalado primeiramente o commit `219cdd8`.  Na imagem acima, foi atualizado para o commit `65ae610`.
+Agora é só rodar o comando `composer update` no seu projeto Laravel para ele atualizar as referências.  Veja o resultado abaixo (usando o link do seu repositório no Github):<br />&nbsp;<br />
+<img src="img/composer-update.png"><br />&nbsp;<br />
+A imagem mostra o uso dos commits do meu repositório.  Eu havia instalado primeiramente o commit `219cdd8`.  Na imagem acima, foi atualizado para o commit `65ae610`.<br />&nbsp;<br />
+
+Mas se você configurou para usar o `repositório localmente`, o resultado será esse:<br />&nbsp;<br />
+<img src="img/composer-update-local-repo.png"><br />&nbsp;<br />
+Você pode observar acima que ele remove a versão Github do meu repositório e instala a versão local.  Com isso, as indicações do commit desaparecem.  Desta maneira eu não preciso mais fazer `push` do meu fork nem `composer update` no meu projeto Laravel, tornando o processo mais dinâmico.
 
 ## Tudo pronto!
 Agora é só seguir o fluxo de qualquer projeto Git: faça as alterações no seu fork e faça o push para o Github.  No diretório do seu projeto Laravel, rode o `composer update` para atualizar o código no seu projeto. Sem POG(Programação Orientada à Gambiarras)!  Grande abraço!
