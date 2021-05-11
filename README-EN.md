@@ -51,7 +51,9 @@ Following what I have done so far, I will configure the version which must be `d
 "power-components/livewire-powergrid": "dev-cpereiraweb",
 ```
 The second step is to inform where is the repository located. To do so, we add the section `repositories` to the `composer.json` file. 
-See below:
+In this section you can inform either your Github repository URL or indicate its path on your local machine. 
+
+The example below uses the GitHub repository URL:
 ```json
         ...
         "spatie/laravel-ray": "^1.17",
@@ -66,10 +68,36 @@ See below:
     "autoload": {
         ...
 ```
+
+And, the next example shows the version with your local path:
+```json
+        ...
+        "spatie/laravel-ray": "^1.17",
+        "wulfheart/pretty_routes": "^0.2.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "Z:\\Code\\forks\\PowerComponents\\livewire-powergrid"
+        }
+    ],
+    "autoload": {
+        ...
+```
+
+Note: The example above shows a Windows OS path. If you are a `WSL`, `Docker`, `Linux` or `MacOS` user, you must adapt this path to your system's format. 
+For example: `/home/cpereiraweb/code/forks/PowerComponents/livewire-powergrid`.
+
 ## 6) Run `composer update` command
-Now, just run `composer update` command inside your Laravel project so composer can update its references. See below the result:<br />
+Now, just run `composer update` command inside your Laravel project so composer can update its references. See below the result using the repository link:<br />
+
 <img src="img/composer-update.png"><br />
 The image shows the commits at my repository. First, I had installed the commit  `219cdd8`.  Now, at the image above you can see that it has been updated to the commit `65ae610`.
+
+If you had your `composer.json` configured to use a local path instead, you should have a result similar to this:<br/>
+<img src="img/composer-update-local-repo.png"><br />&nbsp;<br />
+
+You may notice that the GitHub's version was removed and it was replaced by the local version. The commit indications are no longer displayed. With this configuration, I am not required to `push` my fork nor run `composer update` in my Laravel Project. It is a more dynamic process.
 
 ## It's all set!
 Now, just follow the regular flow of any Git project. Perform any changes to your own fork and push to Github.
