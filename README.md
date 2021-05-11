@@ -83,7 +83,7 @@ E agora veja como fica usando o caminho do seu repositório local (onde você o 
     "autoload": {
         ...
 ```
-*Observação: meu ambiente é Windows 10.  Se você usa `WSL`, `Docker`, `Linux` ou `MacOS`, lembre-se de usar o caminho adequado ao seu sistema, que deve ser algo como `/caminho/do/meu/repo/forkado`, por exemplo.*<br />
+*Observação: meu ambiente é Windows 10.  Se você usa `WSL`, `Docker`, `Linux` ou `MacOS`, lembre-se de usar o caminho adequado ao seu sistema, que deve ser algo como `/home/cpereiraweb/code/forks/PowerComponents/livewire-powergrid`, por exemplo.*<br />
 
 ## 6) Executar o `composer update`
 Agora é só rodar o comando `composer update` no seu projeto Laravel para ele atualizar as referências.  Veja o resultado abaixo (usando o link do seu repositório no Github):<br />&nbsp;<br />
